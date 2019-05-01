@@ -1,10 +1,15 @@
 package contentparser
 
-import "log"
+import (
+	"log"
+)
 
 type Nginx struct {
 }
 
-func (a Nginx) Parse(line string) {
+func (n Nginx) Parse(line string) Access {
 	log.Printf("NGINX replay %s", line)
+
+	// parse and create the Access obj
+	return *NewAccess(line)
 }
