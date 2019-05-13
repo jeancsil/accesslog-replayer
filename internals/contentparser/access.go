@@ -4,8 +4,8 @@ import "time"
 
 type Access struct {
 	Time     time.Time
-	URL      string
-	Type     string
+	URI      string
+	Method   string
 	Original string
 }
 
@@ -14,7 +14,7 @@ func NewAccess(line string) *Access {
 	a := new(Access)
 	a.Original = line
 	// a.Time = ??;
-	a.Type = "POST"
-	a.URL = "http://www.trivago.com.br/"
+	a.Method = "POST"
+	a.URI = "/login"
 	return a
 }
