@@ -3,8 +3,8 @@ package contentparser
 type Apache struct {
 }
 
-func (a Apache) Parse(line string) Access {
+func (a Apache) Parse(line string) (*Access, error) {
 	// log.Printf("Apache Replay %s", line)w
 	// return *Access{Original: line, Time: }
-	return *NewAccess(line)
+	return &Access{Original: line}, nil
 }

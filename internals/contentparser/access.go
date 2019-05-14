@@ -9,12 +9,12 @@ type Access struct {
 	Original string
 }
 
-func NewAccess(line string) *Access {
-	// parse line
-	a := new(Access)
-	a.Original = line
-	// a.Time = ??;
-	a.Method = "POST"
-	a.URI = "/login"
-	return a
-}
+// func NewAccess(line string) *Access {
+// 	// parse line
+// 	a := new(Access)
+// 	a.Original = line
+// 	// a.Time = ??;
+// 	a.Method = "POST"
+// 	a.URI = "/login"
+// 	return a
+// }
